@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var theCoolTableView: UITableView!
     
     var people = ["Marc Benioff", "Suresh Bhasyam", "Vanita", "Productvity", "Salesforce", "ATF", "SeTI"]
+    var meaning = ["Salesforce CEO", "Sr Director-ATF-SeTI", "VP of Productvity Cloud", "Internal Developer productivity tools & infrastructure", "#1 CRM Company, Ranked #2 company to work for", "Automation Test Frameworks", "Selenium Test Infrastructure"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = people[indexPath.row]
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let senderVal = people[indexPath.row] + "\n" + meaning[indexPath.row]
+        print(senderVal)
+        performSegueWithIdentifier("moveSegue", sender: senderVal)
+        
+    }
+    
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
