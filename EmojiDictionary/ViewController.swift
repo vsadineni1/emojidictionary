@@ -35,21 +35,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let senderVal = people[indexPath.row] + "\n" + meaning[indexPath.row]
-        print(senderVal)
+        let senderVal = people[indexPath.row] + "-" + meaning[indexPath.row]
+        //print(senderVal)
         performSegueWithIdentifier("moveSegue", sender: senderVal)
         
     }
     
-   
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let defVC = segue.destinationViewController as! DefinitionViewController
+        defVC.definition = sender as! String
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        
     }
-
-
     
 }
 

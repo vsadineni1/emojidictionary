@@ -47,31 +47,35 @@
             </objects>
             <point key="canvasLocation" x="2228" y="460"/>
         </scene>
-        <!--View Controller-->
+        <!--Definition View Controller-->
         <scene sceneID="mYM-vP-n1H">
             <objects>
-                <viewController id="4Ud-IS-EwZ" sceneMemberID="viewController">
+                <viewController id="4Ud-IS-EwZ" customClass="DefinitionViewController" customModule="EmojiDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KAs-fU-HR2"/>
                         <viewControllerLayoutGuide type="bottom" id="TkX-X9-yu7"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Yg8-43-tkx">
+                    <view key="view" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" id="Yg8-43-tkx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Person details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiZ-UE-hl4">
-                                <rect key="frame" x="36" y="77" width="108" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" preservesSuperviewLayoutMargins="YES" text="Person details" textAlignment="justified" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiZ-UE-hl4">
+                                <rect key="frame" x="31" y="85" width="549" height="109"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DiZ-UE-hl4" firstAttribute="leading" secondItem="Yg8-43-tkx" secondAttribute="leadingMargin" constant="16" id="EGA-do-gf6"/>
-                            <constraint firstItem="DiZ-UE-hl4" firstAttribute="top" secondItem="KAs-fU-HR2" secondAttribute="bottom" constant="57" id="exg-av-ANd"/>
+                            <constraint firstItem="DiZ-UE-hl4" firstAttribute="top" secondItem="KAs-fU-HR2" secondAttribute="bottom" constant="21" id="DBo-QI-5Cf"/>
+                            <constraint firstItem="DiZ-UE-hl4" firstAttribute="trailing" secondItem="Yg8-43-tkx" secondAttribute="trailingMargin" id="KHJ-XG-9Uh"/>
+                            <constraint firstItem="DiZ-UE-hl4" firstAttribute="leading" secondItem="Yg8-43-tkx" secondAttribute="leadingMargin" constant="11" id="rE2-t8-qko"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="definitionLabel" destination="DiZ-UE-hl4" id="xMS-fP-I8A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WoM-Td-qyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
